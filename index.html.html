@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amina Lawal — Strategy & Organizational Transformation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --charcoal: #1A1A2E;
+    --slate: #2D3748;
+    --sage: #4A7C6F;
+    --sage-mid: #7FAF9D;
+    --sage-light: #E8F0EE;
+    --sage-pale: #F4F8F6;
+    --mid-gray: #718096;
+    --light-gray: #E2E8F0;
+    --white: #FFFFFF;
+    --off-white: #FAFAFA;
+
+    --serif: 'EB Garamond', Georgia, serif;
+    --body: 'Lora', Georgia, serif;
+
+    --max-w: 860px;
+    --section-gap: 6rem;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--off-white);
+    color: var(--charcoal);
+    font-family: var(--body);
+    font-size: 17px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(250,250,250,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--light-gray);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .nav-name {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--slate);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: var(--body);
+    font-size: 0.82rem;
+    color: var(--mid-gray);
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--sage); }
+
+  /* HERO */
+  #hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8rem 2rem 5rem;
+    max-width: var(--max-w);
+    margin: 0 auto;
+  }
+
+  .eyebrow {
+    font-family: var(--body);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--sage);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+  }
+
+  h1.hero-name {
+    font-family: var(--serif);
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    font-weight: 700;
+    color: var(--slate);
+    line-height: 1.05;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-rule {
+    width: 80px;
+    height: 3px;
+    background: var(--sage);
+    margin: 1.5rem 0;
+  }
+
+  h2.hero-subtitle {
+    font-family: var(--serif);
+    font-size: clamp(1.35rem, 3vw, 2rem);
+    font-weight: 400;
+    font-style: italic;
+    color: var(--charcoal);
+    margin-bottom: 2.5rem;
+    line-height: 1.35;
+  }
+
+  .hero-statement {
+    font-size: 1.1rem;
+    color: var(--slate);
+    max-width: 640px;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+  }
+
+  .hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  .tag {
+    font-family: var(--body);
+    font-size: 0.8rem;
+    color: var(--sage);
+    border: 1px solid var(--sage-mid);
+    background: var(--sage-pale);
+    padding: 0.3rem 0.85rem;
+    border-radius: 2px;
+    letter-spacing: 0.04em;
+  }
+
+  /* SECTIONS */
+  section {
+    padding: var(--section-gap) 2rem;
+    max-width: var(--max-w);
+    margin: 0 auto;
+  }
+
+  section.alt-bg {
+    max-width: 100%;
+    background: var(--sage-pale);
+    padding: var(--section-gap) 2rem;
+  }
+
+  section.alt-bg .inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+  }
+
+  .section-header {
+    margin-bottom: 3rem;
+  }
+
+  h2.section-title {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 700;
+    color: var(--slate);
+    margin-bottom: 1rem;
+    line-height: 1.15;
+  }
+
+  h3.subsection-title {
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--slate);
+    margin-bottom: 0.6rem;
+    margin-top: 2.5rem;
+    line-height: 1.3;
+  }
+
+  p.lead {
+    font-size: 1.05rem;
+    color: var(--slate);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+
+  p.body-text {
+    color: var(--charcoal);
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+  }
+
+  .divider {
+    border: none;
+    border-top: 1px solid var(--light-gray);
+    margin: 3rem 0;
+  }
+
+  /* PHILOSOPHY GRID */
+  .principles-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin-top: 2rem;
+  }
+
+  .principle-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+
+  .principle-dash {
+    color: var(--sage);
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    line-height: 1.4;
+    flex-shrink: 0;
+    margin-top: 0.05rem;
+  }
+
+  .principle-text {
+    font-size: 0.95rem;
+    color: var(--charcoal);
+    line-height: 1.6;
+  }
+
+  /* CAPABILITY CARDS */
+  .capability-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .capability-card {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 0;
+    background: var(--white);
+    border: 1px solid var(--light-gray);
+    border-left: 4px solid var(--sage);
+    overflow: hidden;
+  }
+
+  .cap-number {
+    background: var(--sage-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--serif);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--sage);
+    padding: 1.5rem 0.5rem;
+  }
+
+  .cap-body {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .cap-title {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--slate);
+    margin-bottom: 0.35rem;
+  }
+
+  .cap-desc {
+    font-size: 0.88rem;
+    color: var(--mid-gray);
+    line-height: 1.65;
+  }
+
+  /* FRAMEWORK FLOW */
+  .framework-flow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem;
+    margin: 1.25rem 0 1.5rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--white);
+    border: 1px solid var(--light-gray);
+  }
+
+  .flow-step {
+    font-family: var(--serif);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--sage);
+  }
+
+  .flow-arrow {
+    color: var(--sage-mid);
+    font-size: 1rem;
+    padding: 0 0.1rem;
+  }
+
+  /* WORK ITEMS */
+  .work-item {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--light-gray);
+  }
+
+  .work-item:last-child { border-bottom: none; }
+
+  /* CAREER TIMELINE */
+  .timeline {
+    position: relative;
+    padding-left: 2rem;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: var(--sage-light);
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 2.5rem;
+  }
+
+  .timeline-dot {
+    position: absolute;
+    left: -2rem;
+    top: 6px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--sage);
+    border: 3px solid var(--off-white);
+    box-shadow: 0 0 0 2px var(--sage-light);
+  }
+
+  .timeline-stage {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--sage);
+    margin-bottom: 0.2rem;
+  }
+
+  .timeline-desc {
+    font-size: 0.92rem;
+    color: var(--mid-gray);
+    line-height: 1.6;
+  }
+
+  /* VALUE PROP */
+  .value-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 3rem;
+    margin-top: 1.5rem;
+  }
+
+  .value-item {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+
+  /* CREDENTIALS */
+  .credentials-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .credential {
+    padding: 1.25rem 1.5rem;
+    background: var(--white);
+    border: 1px solid var(--light-gray);
+    border-top: 3px solid var(--sage);
+  }
+
+  .credential-name {
+    font-family: var(--serif);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--slate);
+  }
+
+  /* CTA */
+  #contact {
+    text-align: center;
+    padding: 5rem 2rem;
+    background: var(--slate);
+    max-width: 100%;
+  }
+
+  #contact .inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+  }
+
+  #contact .eyebrow { color: var(--sage-mid); }
+
+  #contact h2 {
+    font-family: var(--serif);
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 1rem;
+  }
+
+  #contact p {
+    color: rgba(255,255,255,0.65);
+    max-width: 520px;
+    margin: 0 auto 2rem;
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    font-family: var(--body);
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--white);
+    border: 1px solid var(--sage-mid);
+    padding: 0.85rem 2.5rem;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  .cta-btn:hover {
+    background: var(--sage);
+    border-color: var(--sage);
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate {
+    opacity: 0;
+    animation: fadeUp 0.7s ease forwards;
+  }
+
+  .delay-1 { animation-delay: 0.1s; }
+  .delay-2 { animation-delay: 0.25s; }
+  .delay-3 { animation-delay: 0.4s; }
+  .delay-4 { animation-delay: 0.55s; }
+  .delay-5 { animation-delay: 0.7s; }
+
+  /* RESPONSIVE */
+  @media (max-width: 640px) {
+    .principles-grid, .value-cols, .credentials-grid { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    #hero { padding-top: 6rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-name">Amina Lawal</span>
+  <ul class="nav-links">
+    <li><a href="#profile">Profile</a></li>
+    <li><a href="#capabilities">Capabilities</a></li>
+    <li><a href="#frameworks">Frameworks</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#career">Career</a></li>
+    <li><a href="#contact">Connect</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div id="hero">
+  <p class="eyebrow animate delay-1">Global Leadership Portfolio</p>
+  <h1 class="hero-name animate delay-2">Amina<br>Lawal</h1>
+  <div class="hero-rule animate delay-3"></div>
+  <h2 class="hero-subtitle animate delay-3">Strategy &amp; Organizational Transformation</h2>
+  <p class="hero-statement animate delay-4">
+    I design and scale organizations by aligning strategy, systems, and human capability into executable operating models. My work sits at the intersection of organizational strategy, innovation enablement, AI readiness, and responsible growth.
+  </p>
+  <div class="hero-tags animate delay-5">
+    <span class="tag">Organizational Strategy</span>
+    <span class="tag">Systems Design</span>
+    <span class="tag">Innovation &amp; AI Enablement</span>
+    <span class="tag">Responsible Scale</span>
+    <span class="tag">Executive Partnership</span>
+  </div>
+</div>
+
+<!-- PROFILE -->
+<section id="profile">
+  <div class="section-header">
+    <p class="eyebrow">Executive Profile</p>
+    <h2 class="section-title">The Work I Do</h2>
+  </div>
+  <p class="lead">
+    My work sits at the intersection of organizational strategy, innovation enablement, AI readiness, and responsible growth. I translate ambitious vision into operational reality — connecting the intent of leadership with the systems that make it executable.
+  </p>
+  <p class="body-text">
+    What this looks like in practice: designing organizational systems that scale without losing purpose; building innovation ecosystems that preserve structure; creating efficiency models that retain humanity; establishing accountability frameworks that sustain trust.
+  </p>
+
+  <hr class="divider">
+
+  <p class="eyebrow">Leadership Philosophy</p>
+  <h3 class="subsection-title">Strategy, People, and Execution — Designed as One</h3>
+  <p class="body-text">
+    Organizations succeed when these three elements are designed as a single integrated system, not managed separately. Most transformation initiatives fail not because the strategy is wrong, but because the systems to execute it were never built.
+  </p>
+
+  <div class="principles-grid">
+    <div class="principle-item">
+      <span class="principle-dash">—</span>
+      <span class="principle-text">Systems before symptoms</span>
+    </div>
+    <div class="principle-item">
+      <span class="principle-dash">—</span>
+      <span class="principle-text">Strategy must be executable</span>
+    </div>
+    <div class="principle-item">
+      <span class="principle-dash">—</span>
+      <span class="principle-text">Human-centered, data-informed decisions</span>
+    </div>
+    <div class="principle-item">
+      <span class="principle-dash">—</span>
+      <span class="principle-text">Growth with responsibility</span>
+    </div>
+  </div>
+</section>
+
+<!-- CAPABILITIES -->
+<section class="alt-bg" id="capabilities">
+  <div class="inner">
+    <div class="section-header">
+      <p class="eyebrow">Capability Architecture</p>
+      <h2 class="section-title">Five Domains of Strategic Impact</h2>
+    </div>
+    <p class="lead">
+      Each domain represents a distinct capability area — not a job function, but a way of creating organizational value. In practice, these domains intersect and reinforce each other.
+    </p>
+
+    <div class="capability-cards">
+      <div class="capability-card">
+        <div class="cap-number">01</div>
+        <div class="cap-body">
+          <div class="cap-title">Organizational Strategy &amp; Design</div>
+          <div class="cap-desc">Making strategy executable. Translating leadership vision into operating models, structures, and governance that function at scale.</div>
+        </div>
+      </div>
+      <div class="capability-card">
+        <div class="cap-number">02</div>
+        <div class="cap-body">
+          <div class="cap-title">Systems That Drive Performance</div>
+          <div class="cap-desc">Creating repeatable success. Designing the diagnostic models, performance architectures, and operational rhythms that sustain results over time.</div>
+        </div>
+      </div>
+      <div class="capability-card">
+        <div class="cap-number">03</div>
+        <div class="cap-body">
+          <div class="cap-title">Innovation &amp; AI Enablement</div>
+          <div class="cap-desc">Bridging human systems and technology. Building the organizational readiness, decision frameworks, and learning pathways that allow teams to adopt AI with confidence.</div>
+        </div>
+      </div>
+      <div class="capability-card">
+        <div class="cap-number">04</div>
+        <div class="cap-body">
+          <div class="cap-title">Safeguarding &amp; Responsible Growth</div>
+          <div class="cap-desc">Scaling with integrity. Embedding accountability, ethical safeguards, and protective governance into organizations as they grow.</div>
+        </div>
+      </div>
+      <div class="capability-card">
+        <div class="cap-number">05</div>
+        <div class="cap-body">
+          <div class="cap-title">Executive Partnership &amp; Transformation</div>
+          <div class="cap-desc">Connecting leadership intent to action. Partnering with senior leaders to design and deliver transformation that holds — through complexity and change.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FRAMEWORKS -->
+<section id="frameworks">
+  <div class="section-header">
+    <p class="eyebrow">Signature Frameworks</p>
+    <h2 class="section-title">How I Think About Systems</h2>
+  </div>
+  <p class="lead">
+    These frameworks emerged from practice — from working through complex organizational challenges across contexts and sectors. They are thinking tools, not rigid templates.
+  </p>
+
+  <h3 class="subsection-title">Strategy → Capability → Execution Model™</h3>
+  <p class="body-text" style="font-style: italic; color: var(--mid-gray); margin-bottom: 1rem; font-size: 0.92rem;">A sequential design model for making strategy operational</p>
+
+  <div class="framework-flow">
+    <span class="flow-step">Strategy Intent</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">Capability Readiness</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">System Design</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">Execution Rhythm</span>
+    <span class="flow-arrow">→</span>
+    <span class="flow-step">Sustainable Impact</span>
+  </div>
+
+  <p class="body-text">This model prevents a common failure: organizations that define strategy clearly but then attempt to execute it without first assessing whether the organizational capability to deliver actually exists.</p>
+
+  <hr class="divider">
+
+  <h3 class="subsection-title">Responsible Scale Framework™</h3>
+  <p class="body-text" style="font-style: italic; color: var(--mid-gray); margin-bottom: 1rem; font-size: 0.92rem;">Balancing growth velocity with organizational integrity</p>
+  <p class="body-text">As organizations scale, three dimensions must remain in deliberate balance: operational systems that can absorb growth, human accountability that does not erode with speed, and ethical safeguards that are embedded rather than retrofitted.</p>
+
+  <hr class="divider">
+
+  <h3 class="subsection-title">Adaptive Talent Architecture™</h3>
+  <p class="body-text" style="font-style: italic; color: var(--mid-gray); margin-bottom: 1rem; font-size: 0.92rem;">A principles-based approach to organizational capability building</p>
+
+  <div class="principles-grid">
+    <div class="principle-item"><span class="principle-dash">—</span><span class="principle-text">Build before buy</span></div>
+    <div class="principle-item"><span class="principle-dash">—</span><span class="principle-text">Mobility before replacement</span></div>
+    <div class="principle-item"><span class="principle-dash">—</span><span class="principle-text">Capability over title</span></div>
+    <div class="principle-item"><span class="principle-dash">—</span><span class="principle-text">Readiness over tenure</span></div>
+  </div>
+
+  <p class="body-text" style="margin-top: 1.5rem;">These principles reframe talent decisions as strategic choices — recognizing that the most resilient organizations invest in the capability they already have before seeking it externally.</p>
+</section>
+
+<!-- WORK -->
+<section class="alt-bg" id="work">
+  <div class="inner">
+    <div class="section-header">
+      <p class="eyebrow">Selected Work</p>
+      <h2 class="section-title">Proof of Thinking</h2>
+    </div>
+    <p class="lead">The following examples illustrate how these frameworks and capabilities have been applied in practice. Each represents a distinct organizational challenge — and a systems-level response.</p>
+
+    <div class="work-item">
+      <h3 class="subsection-title" style="margin-top: 0;">Enterprise Succession Intelligence System</h3>
+      <p class="body-text">Designed and built a multi-level successor mapping capability, integrating readiness scoring, leadership risk visibility, and pipeline diagnostics. The system moved succession from an annual compliance exercise to a continuous strategic intelligence function.</p>
+    </div>
+
+    <div class="work-item">
+      <h3 class="subsection-title" style="margin-top: 0;">Organizational Capacity Improvement Framework</h3>
+      <p class="body-text">Created diagnostic models that traced performance gaps to their root capability deficits — connecting underperformance to specific learning and structural interventions. This enabled leadership to invest in capability rather than react to symptoms.</p>
+    </div>
+
+    <div class="work-item">
+      <h3 class="subsection-title" style="margin-top: 0;">Recruitment as a Strategic Engine</h3>
+      <p class="body-text">Redesigned hiring systems around innovation potential rather than role replacement. Developed behavioral evaluation scorecards that assessed strategic thinking, adaptability, and cross-functional impact — shifting recruitment from a reactive function to a forward-facing organizational capability.</p>
+    </div>
+
+    <div class="work-item">
+      <h3 class="subsection-title" style="margin-top: 0;">AI-Augmented Organizational Decision Support</h3>
+      <p class="body-text">Designed structured prompting systems and applied AI tools to succession planning and organizational capacity workflows — ensuring AI augmented decision-making rather than replaced it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CAREER -->
+<section id="career">
+  <div class="section-header">
+    <p class="eyebrow">Career Narrative</p>
+    <h2 class="section-title">The Through-Line</h2>
+  </div>
+  <p class="lead">My career has always centered on a single question: how do organizations translate ambition into systems that actually work?</p>
+  <p class="body-text">The entry point was people and culture — a domain that surfaces organizational dysfunction before almost any other. But the work quickly evolved. Diagnosing people-related challenges revealed deeper structural questions: about strategy, governance, capability, and organizational design. That evolution was not accidental. It followed the logic of the work itself.</p>
+  <p class="body-text">The through-line across every role and context: designing systems that enable execution, preparing organizations for complexity, and scaling impact in ways that preserve integrity.</p>
+
+  <hr class="divider">
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-stage">Foundation</div>
+      <div class="timeline-desc">People &amp; culture roles — developing diagnostic capability and systems thinking across organizational functions.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-stage">Strategic Expansion</div>
+      <div class="timeline-desc">Organizational design, performance architecture, and transformation — moving from symptom to system.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-stage">Organizational Leadership</div>
+      <div class="timeline-desc">End-to-end strategy and systems design at organizational scale — leading transformation across complex environments.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-stage">Future Direction</div>
+      <div class="timeline-desc">Global roles in strategy, transformation, and impact at scale — with international organizations and mission-driven institutions.</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <p class="eyebrow">Credentials</p>
+  <div class="credentials-grid">
+    <div class="credential"><div class="credential-name">SHRM-SCP</div></div>
+    <div class="credential"><div class="credential-name">PMP Certification</div></div>
+    <div class="credential"><div class="credential-name">MSc International Human Resources</div></div>
+    <div class="credential"><div class="credential-name">BSc English</div></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="inner">
+    <p class="eyebrow">Global Value Proposition</p>
+    <h2>Available for global strategy, transformation, and impact roles</h2>
+    <p>I help organizations move from ambition to execution — by designing the systems that align strategy, people, and operations into something that actually works.</p>
+    <a href="mailto:" class="cta-btn">Get in Touch</a>
+  </div>
+</section>
+
+</body>
+</html>
